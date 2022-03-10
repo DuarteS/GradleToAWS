@@ -13,9 +13,9 @@ public class HelloController {
 
     @CrossOrigin
     @GetMapping("/hello")
-    public String hello() {
-        //helloModel test = new helloModel(1,"test");
-        return "testingnnanaksndnasij ijnaisdasda asd";
+    public helloModel hello() {
+        helloModel test = new helloModel(1,"test");
+        return test;
     }
 
 }
