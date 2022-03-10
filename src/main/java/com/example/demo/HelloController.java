@@ -15,7 +15,7 @@ public class HelloController {
     @GetMapping("/hello")
     public String hello() {
         //helloModel test = new helloModel(1,"test");
-        return "test";
+        return "testingnnanaksndnasij ijnaisdasda asd";
     }
 
 }
