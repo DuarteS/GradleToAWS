@@ -14,7 +14,10 @@ public class HelloController {
     @CrossOrigin
     @GetMapping("/hello")
     public String hello() {
-        String message = "Hello AWS Continuous Delivery!";
+        String message = "{ " +
+                "hello: 'hello'," +
+                "test : 'hellotest'" +
+                "}";
         return message;
     }
 
