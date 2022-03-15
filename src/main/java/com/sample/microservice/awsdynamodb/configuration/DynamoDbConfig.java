@@ -11,6 +11,7 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapperConfig;
 import lombok.RequiredArgsConstructor;
 import org.socialsignin.spring.data.dynamodb.repository.config.EnableDynamoDBRepositories;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -19,11 +20,22 @@ import org.springframework.context.annotation.Configuration;
 @EnableDynamoDBRepositories(basePackages = "com.sample.microservice.awsdynamodb.repository")
 public class DynamoDbConfig {
 
-    private final AwsConfig config;
+    @Value("${accesskey}")
+    private String accessKey;
+
+
+    @Value("${secretKey}")
+    private String secretKey;
+
+    @Value("${region}")
+    private String region;
+
+    @Value("${endpoint}")
+    private String endpoint;
 
 
     public AWSCredentialsProvider amazonAWSCredentialsProvider() {
-        return new AWSStaticCredentialsProvider(new BasicAWSCredentials(config.getAccessKey(), config.getSecretKey()));
+        return new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey));
     }
 
     @Bean
@@ -39,7 +51,7 @@ public class DynamoDbConfig {
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
         return AmazonDynamoDBClientBuilder.standard().withCredentials(amazonAWSCredentialsProvider())
-                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(config.getEndpoint(), config.getRegion()))
+                .withEndpointConfiguration(new AwsClientBuilder.EndpointConfiguration(region, endpoint))
                 .build();
     }
 }
