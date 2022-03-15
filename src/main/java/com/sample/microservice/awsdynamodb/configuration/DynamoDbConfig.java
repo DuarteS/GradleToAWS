@@ -24,7 +24,7 @@ public class DynamoDbConfig {
     private String accessKey;
 
 
-    @Value("${secretKey}")
+    @Value("${secretkey}")
     private String secretKey;
 
     @Value("${region}")
