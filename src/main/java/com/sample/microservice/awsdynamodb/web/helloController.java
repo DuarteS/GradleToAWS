@@ -31,7 +31,7 @@ public class helloController {
 
     @GetMapping()
     public String hello() {
-        return secretManagerTest3 + dynamodbAccessKey + secretkey + secretManagerTest2;
+        return secretManagerTest3;
 
     }
 }
