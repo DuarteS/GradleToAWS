@@ -4,6 +4,7 @@ package com.sample.microservice.awsdynamodb.web;
 import com.sample.microservice.awsdynamodb.domain.Member;
 import com.sample.microservice.awsdynamodb.exception.DataNotFoundException;
 import com.sample.microservice.awsdynamodb.service.MemberService;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
