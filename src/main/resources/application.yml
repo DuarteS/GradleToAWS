@@ -1,9 +1,9 @@
 # AWS properties
-aws:
-  access-key: `${AWS_ACCESS_KEY}`
-  secret-key: `${AWS_SECRET_KEY}`
-  region: `${AWS_REGION}`
-  endpoint: `${AWS_ENDPOINT}`
+
 
 server:
   port: 5000
+
+spring:
+  application:
+    name: duarte
