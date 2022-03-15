@@ -36,8 +36,6 @@ public class DynamoDbConfig {
 
 
     public AWSCredentialsProvider amazonAWSCredentialsProvider() {
-
-        //AWSCredentialsProvider awsCredentialsProvider = ProfileCredentialsProvider.create("bierlijstUser");
         return new AWSStaticCredentialsProvider(new BasicAWSCredentials(accessKey, secretKey));
     }
 
