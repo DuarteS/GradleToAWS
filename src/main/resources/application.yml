@@ -1,9 +1,9 @@
 # AWS properties
 aws:
-  access-key: ${AWS_ACCESS_KEY}
-  secret-key: ${AWS_SECRET_KEY}
-  region: ${AWS_REGION}
-  endpoint: ${AWS_ENDPOINT}
+  access-key: '${{ secrets.AWS_ACCESS_KEY }}'
+  secret-key: '${{ secrets.AWS_SECRET_KEY }}'
+  region: '${{ secrets.AWS_REGION }}'
+  endpoint: '${{ secrets.AWS_ENDPOINT }}'
 
 server:
   port: 3306
