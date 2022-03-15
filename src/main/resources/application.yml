@@ -1,9 +1,9 @@
 # AWS properties
 aws:
-  access-key: AKIARIN5XEOOQPPNTAM5
-  secret-key: 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
-  region: eu-central-1
-  endpoint: dynamodb.eu-central-1.amazonaws.com
+  access-key: `${AWS_ACCESS_KEY}`
+  secret-key: `${AWS_SECRET_KEY}`
+  region: `${AWS_REGION}`
+  endpoint: `${AWS_ENDPOINT}`
 
 server:
   port: 5000
