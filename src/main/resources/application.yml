@@ -1,0 +1,9 @@
+# AWS properties
+aws:
+  access-key: AKIARIN5XEOOQPPNTAM5
+  secret-key: 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
+  region: eu-central-1
+  endpoint: dynamodb.eu-central-1.amazonaws.com
+
+server:
+  port: 3306
