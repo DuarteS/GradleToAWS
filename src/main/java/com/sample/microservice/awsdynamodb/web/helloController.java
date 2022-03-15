@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/hello")
 public class helloController {
 
-    @Value("${ccesskey}")
+    @Value("${accesskey}")
     private String dynamodbAccessKey;
 
 

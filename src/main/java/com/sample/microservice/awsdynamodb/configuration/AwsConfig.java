@@ -1,40 +1,21 @@
 package com.sample.microservice.awsdynamodb.configuration;
 
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
 
-/**
- * Properties specific to aws client.
- * <p>
- * Properties are configured in the {@code application.yml} file.
- */
-@Data
-@Component
-@ConfigurationProperties(prefix = "aws", ignoreUnknownFields = false)
+import org.springframework.beans.factory.annotation.Value;
+
 public class AwsConfig {
 
-    /**
-     * Aws access key ID
-     */
+    @Value("${accesskey}")
     private String accessKey;
 
 
-    /**
-     * Aws secret access key
-     */
+    @Value("${secretKey}")
     private String secretKey;
 
-    /**
-     * Aws region
-     */
+    @Value("${region}")
     private String region;
 
-    /**
-     * dynamodb endpoint
-     */
+    @Value("${endpoint}")
     private String endpoint;
 
 }
