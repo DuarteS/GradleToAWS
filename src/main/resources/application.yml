@@ -6,4 +6,4 @@ aws:
   endpoint: dynamodb.eu-central-1.amazonaws.com
 
 server:
-  port: 3306
+  port: 5000
