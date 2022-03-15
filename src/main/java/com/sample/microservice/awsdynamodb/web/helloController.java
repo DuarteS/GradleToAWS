@@ -17,6 +17,8 @@ public class helloController {
     @Value("${accesskey}")
     private String dynamodbAccessKey;
 
+    @Value("${secretkey}")
+    private String secretkey;
 
     @Value("${test1}")
     private String secretManagerTest1;
@@ -29,7 +31,7 @@ public class helloController {
 
     @GetMapping()
     public String hello() {
-        return secretManagerTest3 + dynamodbAccessKey;
+        return secretManagerTest3 + dynamodbAccessKey + secretkey;
 
     }
 }
